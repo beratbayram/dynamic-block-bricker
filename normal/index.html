@@ -1,0 +1,109 @@
+<head>
+
+	<meta charset="UTF-8">
+	<title>Brick Breaker</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+	<style>
+		body {
+			background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(0, 60, 255) 100%);
+		}
+
+		a {
+			color: white;
+		}
+
+		button {
+			background-color: transparent;
+			border: 2px solid white;
+			color: white;
+			padding: 5px;
+			cursor: pointer;
+		}
+
+		#gameover {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 40vmin;
+			height: 30vmin;
+			display: none;
+			z-index: 2;
+		}
+
+		#gameoverInner {
+			padding: 10px;
+			background: rgba(0, 0, 0, 0.7);
+			color: white;
+			position: relative;
+			top: 180px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		#youwon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+			width: 18vmin;
+			height: 18vmin;
+			z-index: 2;
+			display: none;
+		}
+
+		#youlose {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+			width: 40vmin;
+			height: 17vmin;
+			z-index: 2;
+			display: none;
+		}
+
+		#space {
+			background: white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 98vmin;
+			height: 98vmin;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="gameover">
+		<img src="img/youwon.png" alt="" id="youwon">
+		<img src="img/gameover.png" alt="" id="youlose">
+		<div id="gameoverInner">
+			<h2>
+				Thank you for playing
+			</h2>
+			<p>
+				If you like it, don't forget to leave a start on <a
+					href="https://github.com/beratbayram/dynamic-block-bricker">GitHub</a> ⭐
+			</p>
+			<address>By <a rel="author" href="https://www.linkedin.com/in/ahmet-bi%C3%A7er-b69836175/">Ahmet BİÇER</a>
+				(324317)
+			</address>
+			<br />
+			<button onclick="location.reload()">
+				Try Again
+			</button>
+		</div>
+	</div>
+	<canvas id="space" width="1000" height="900"></canvas>
+
+	<script src="images.js"></script>
+	<script src="brickbreaker.js"></script>
+</body>
+
+</html>

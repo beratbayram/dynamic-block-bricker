@@ -1,15 +1,59 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Pixelate</title>
-  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700|Karma:400,700" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <title>CodePen - VWD Lecture 2</title>
+  <meta name="author" content="Berat BAYRAM">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <canvas id="bufferCanvas"></canvas>
-  <script src="script.js"></script>
+
+  <body>
+    <canvas id="mainCanvas"></canvas>
+    <div id="formOverlay">
+      <form id="form">
+        <h1>Welcome to the Image Bricker</h1>
+        <label>Image Source (CORS is disabled! use <a
+            href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf">this</a>
+          to activate it)</label>
+        <input id="URL" placeholder="Image URL" type="url"
+          value="https://images.unsplash.com/photo-1590518226506-4c9b077392cc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80">
+        <label>Resolution</label>
+        <input type="range" id="Resolution" name="Resolution" min="1" max="10" value="5">
+        <label>Background Color Intolerance</label>
+        <input type="range" id="Tolerance" name="Tolerance" min="0" max="100" value="55">
+        <label>Ball Speed</label>
+        <input type="range" id="Speed" name="Speed" min="1" max="5" value="2">
+        <label>Result (Click color to remove)</label>
+        <canvas id="bufferCanvas"></canvas>
+        <br>
+        <div id="formButtons">
+          <button type="button" id="preview">🔄&nbsp; &nbsp; LOAD &nbsp; &nbsp;🔄</button>
+          <button type="submit" id="submit" disabled>🎮&nbsp; &nbsp; START &nbsp; &nbsp;🎮</button>
+        </div>
+      </form>
+    </div>
+    <div id="gameover">
+      <h2>
+        Thank you for playing
+      </h2>
+      <p>
+        If you like it, don't forget to<br/>leave a start on <a
+          href="https://github.com/beratbayram/dynamic-block-bricker">GitHub</a> ⭐
+      </p>
+      <address class="author">By <a rel="author" href="https://www.linkedin.com/in/berat-bayram/">Berat BAYRAM</a>
+        (324372)
+      </address>
+      <br>
+      <button onclick="location.reload()">
+        Try Again
+      </button>
+    </div>
+  </body>
+  <script src="./script.js"></script>
 </body>
 
 </html>
