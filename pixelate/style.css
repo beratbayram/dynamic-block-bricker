@@ -1,5 +1,10 @@
 *{
-  color: white
+  color: white;
+  font-size: 2vmin;
+}
+
+h1 {
+  font-size: 4vmin;
 }
 
 body {
@@ -80,4 +85,9 @@ button {
 
 a {
   color: white;
+}
+
+#submit {
+  color: grey;
+  border: 1px solid grey;
 }

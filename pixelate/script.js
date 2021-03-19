@@ -15,7 +15,10 @@ function preview() {
 
   img.onload = () => {
     board = new Board(img, tolerance, resolution);
-    document.getElementById("submit").disabled = false;
+    const submitBtn =  document.getElementById("submit");
+    submitBtn.disabled = false;
+    submitBtn.style.color= "white";
+    submitBtn.style.border= "1px solid white";
   };
 }
 
