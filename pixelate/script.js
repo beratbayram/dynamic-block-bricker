@@ -278,7 +278,6 @@ function getPixelArr(img, tolerance, resolution) {
         (canvas.height * (event.clientY - rect.top)) / (rect.bottom - rect.top)
       ),
     ];
-    console.log(location);
     var data = ctx.getImageData(location[0], location[1], 1, 1);
     bgColor.r = data.data[0];
     bgColor.g = data.data[1];
